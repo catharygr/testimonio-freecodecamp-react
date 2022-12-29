@@ -10,16 +10,16 @@ export default function Testimonio(props) {
     <div className='contenedor-testimonio'>
       <img 
         className='imagen-testimonio'
-        src={require(`../imagenes/${props.imagen}.jpeg`)}
-        alt='Foto de '/>
+        src={require(`../imagenes/${props.item.imagen}.jpeg`)}
+        alt={`Foto de ${props.item.nombre}`} />
       <div className='contenedor-texto-testimonio'>
         <p className='nombre-testimonio'>
-          <strong>{props.nombre}</strong> en {props.pais}
+          <strong>{props.item.nombre}</strong> en {props.item.pais}
         </p>
         <p className='cargo-testimonio'>
-          {props.cargo} en <strong>{props.empresa}</strong>
+          {props.item.cargo} en <strong>{props.item.empresa}</strong>
         </p>
-        <p className='texto-testimonio' dangerouslySetInnerHTML={{__html: props.testimonio}} ></p>
+        <p className='texto-testimonio' dangerouslySetInnerHTML={{__html: props.item.testimonio}} ></p>
 
       </div>
     </div>
